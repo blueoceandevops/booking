@@ -1,10 +1,10 @@
 server:
   port: 80
-  context-path: /booking
+  context-path: /
 
 spring:
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
     url: jdbc:mysql://127.0.0.1:3306/booking?serverTimezone=UTC&amp;useUnicode=true&amp;characterEncoding=utf-8&useSSL=true
     username: root
     password: 9t37qmeOR64l
@@ -16,9 +16,19 @@ spring:
   thymeleaf:
     cache: false
 
-#logging:
+info:
+  app:
+    name: @project.artifactId@
+    encoding: @project.build.sourceEncoding@
+    java:
+      source: @java.version@
+      target: @java.version@
+
+logging:
+  level: debug
 #  pattern:
 #    console: "%d - %msg%n"
-##  path: /log/tomcat/
+#  path: /log/tomcat/
 #  file: /log/tomcat/project.log
-#  level: debug
+
+

@@ -108,7 +108,7 @@ $('#calendar').fullCalendar({
             title: 'Rain',
             start: '2018-04-26T20:00',
             end: '2018-04-26T21:00',
-            url: 'javascript:alert("张老师棒棒哒")',
+            url: 'javascript:alert("老师棒棒哒")',
             color: 'blue'
         }
     ]
